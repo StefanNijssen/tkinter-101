@@ -7,13 +7,15 @@ window.title("Grabbelton")
 window.geometry('100x100')
 button = tk.Button(text='GRAB!', bg="white", fg="black")
 button.pack(pady = 10, padx= 10)
-
+ton = ['appel', 'peer', 'banaan', 'citroen', 'tomaat', 'prei', 'sla', 'komkommer', 'meloen', 'aardbei']
 def clickButton(event):
-    ton = ['appel', 'peer', 'banaan', 'citroen', 'tomaat', 'prei', 'sla', 'komkommer', 'meloen', 'aardbei']
+    
     if button.config('text')[-1] == 'GRAB!':
-        print(random.choice(ton))
+        prijs = random.choice(ton)
+        print('gefeliciteerd! U heeft een ' + prijs + ' gewonnen!')
+        ton.remove(prijs)
 
-        
+
 # alle tkinter code komt hier tussen
 
 
